@@ -1,0 +1,125 @@
+.about-section {
+  background-color: var(--bg);
+  padding: 8rem 0;
+}
+
+.about-flex {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+}
+
+.about-image {
+  flex: 1;
+}
+
+.image-frame {
+  position: relative;
+  width: 100%;
+}
+
+.image-frame img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 2;
+}
+
+.frame-decoration {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  width: 100px;
+  height: 100px;
+  border-top: 5px solid var(--accent);
+  border-left: 5px solid var(--accent);
+  z-index: 1;
+}
+
+.about-content {
+  flex: 1.2;
+}
+
+.about-eyebrow {
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 3px;
+  margin-bottom: 1.5rem;
+}
+
+.about-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  color: var(--text-dark);
+  margin-bottom: 2rem;
+  line-height: 1.1;
+}
+
+.about-description {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+}
+
+.about-stats {
+  display: flex;
+  gap: 4rem;
+  margin-top: 3rem;
+  padding-top: 3rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.stat-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-number {
+  font-family: var(--font-serif);
+  font-size: 2.5rem;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 992px) {
+  .about-flex {
+    flex-direction: column;
+    gap: 4rem;
+    text-align: center;
+  }
+  .about-stats {
+    justify-content: center;
+    gap: 3rem;
+  }
+  .frame-decoration {
+    left: 50%;
+    transform: translateX(-50%);
+    top: -15px;
+    width: 80%;
+    border-left: none;
+    border-top: 3px solid var(--accent);
+  }
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    padding: 5rem 0;
+  }
+  .about-title {
+    font-size: 2.5rem;
+  }
+  .stat-number {
+    font-size: 2rem;
+  }
+}

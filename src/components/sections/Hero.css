@@ -1,0 +1,210 @@
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #fffcfd 0%, #fff0f5 100%);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 100px 0;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+}
+
+.hero-text-content {
+  flex: 1;
+  text-align: left;
+  z-index: 10;
+}
+
+.hero-eyebrow {
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+
+.hero-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  color: var(--text-dark);
+  margin-bottom: 2rem;
+  line-height: 1.2;
+}
+
+.hero-btns {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Glass Cards Desktop */
+.glass-card {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  z-index: 5;
+}
+
+.quote-card {
+  position: absolute;
+  max-width: 250px;
+  font-style: italic;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.card-1 { top: 15%; right: 10%; }
+.card-2 { bottom: 20%; left: 5%; }
+
+/* Mobile Phone Frame (The UI piece) */
+.mobile-phone-frame {
+  flex: 0.8;
+  max-width: 380px;
+  background: white;
+  padding: 1rem;
+  border-radius: 40px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+  position: relative;
+  border: 8px solid #2d2d2d;
+}
+
+.phone-screen {
+  width: 100%;
+  aspect-ratio: 9/16;
+  border-radius: 25px;
+  overflow: hidden;
+  position: relative;
+}
+
+.phone-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.phone-caption {
+  display: none !important; /* Unified hidden */
+}
+
+/* Appreciation Text (Unified) */
+.mobile-appreciation {
+  display: block; /* Visible everywhere */
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  width: 85%;
+  text-align: center;
+}
+
+.mobile-appreciation .badge {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  padding: 0.4rem 1.2rem;
+  border-radius: 100px;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  display: inline-block;
+  margin-bottom: 0.8rem;
+}
+
+.appreciation-sub {
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.4;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  opacity: 0.9;
+}
+
+.phone-caption h3 {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary);
+}
+
+.phone-caption p {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.btn-sm {
+  padding: 0.5rem 1.2rem;
+  font-size: 0.8rem;
+}
+
+/* Floating Heart */
+.floating-heart-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 55px;
+  height: 55px;
+  background: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  box-shadow: 0 10px 20px rgba(255, 105, 180, 0.3);
+  z-index: 999;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.floating-heart-btn:hover { transform: scale(1.1); }
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding-top: 80px;
+    padding-bottom: 60px;
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-container {
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .hero-text-content {
+    order: 2;
+    text-align: center;
+  }
+  .hero-title {
+    font-size: 2.2rem;
+  }
+  .hero-btns {
+    flex-direction: column;
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+  .mobile-phone-frame {
+    order: 1;
+    max-width: 300px;
+    border-width: 6px;
+  }
+  .phone-caption {
+    display: none !important;
+  }
+  .mobile-appreciation {
+    display: block;
+  }
+  .hero-desktop-only { display: none; }
+  .floating-heart-btn { bottom: 85px; right: 20px; width: 45px; height: 45px; font-size: 1.2rem; }
+}

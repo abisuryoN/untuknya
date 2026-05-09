@@ -1,0 +1,89 @@
+.letters-section {
+  background-color: var(--bg-soft);
+}
+
+.letters-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+
+.letter-card {
+  background: white;
+  padding: 3rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(255, 105, 180, 0.05);
+  transition: all 0.4s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.letter-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px rgba(255, 105, 180, 0.1);
+}
+
+.letter-header {
+  margin-bottom: 1.5rem;
+}
+
+.quote-mark {
+  font-family: var(--font-serif);
+  font-size: 4rem;
+  color: var(--accent);
+  line-height: 0.5;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.letter-title {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.letter-text {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  font-style: italic;
+  flex: 1;
+  margin-bottom: 2rem;
+  line-height: 1.7;
+}
+
+.letter-footer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.author-line {
+  height: 1px;
+  width: 30px;
+  background-color: var(--accent);
+}
+
+.author-name {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 992px) {
+  .letters-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .letters-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .letter-card {
+    padding: 2.5rem 1.5rem;
+  }
+}
