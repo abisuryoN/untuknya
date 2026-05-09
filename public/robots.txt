@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://tiarasaputri.vercel.app/sitemap.xml
